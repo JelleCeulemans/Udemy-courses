@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="vue.js"></script>
+    <style>
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,6 +44,7 @@
     </p>
     <input type="text" v-on:keyup.enter.space="alertMe">
     <br /><br/>
+
     <input type="text" v-model="name">
     <p>{{ name }}</p>
 
@@ -33,6 +55,24 @@
         <p>Counter: {{ counter }} | {{ secondCounter }}</p>
         <p>Result: {{ result() }} | {{ output }}</p>
     </div>
+
+    <button @click="changeLink">Click to change Link</button>
+    <a :href="link" target="_blank">Link</a>
+
+
+    <div>
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" @click="attachRed = !attachRed" :class="{red: attachRed}"></div>
+        <div class="demo" :class="[color,  {red: attachRed}]"></div>
+
+        <div class="demo" :style="{backgroundColor: color}"></div>
+        <div class="demo" :style="myStyle"></div>
+        <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+    </div>
+    <hr />
+
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
 </div>
 
 
@@ -42,19 +82,42 @@
         data: {
             changingWord: 'changing word',
             title: 'Hello World!',
-            link: 'http://google.com',
             finishedLink: '<a href="http://google.com">Google</a>',
             counter: 0,
             x: 0,
             y: 0,
             name: 'Max',
-            secondCounter: 0
+            secondCounter: 0,
+            link: 'https://jelleceulemans.be',
+            attachRed: false,
+            color: 'green',
+            width: 100
         },
         computed: {
-          output: function () {
-              console.log('Computed');
-              return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
-          }
+            divClasses: function() {
+                return {
+                    red: this.attachRed,
+                    blue: !this.attachRed
+                }
+            },
+            output: function () {
+                console.log('Computed');
+                return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+            },
+            myStyle: function () {
+                return {
+                    backgroundColor: this.color,
+                    width: this.width + 'px'
+                };
+            }
+        },
+        watch: {
+            counter: function (value) {
+                var vm = this;
+                 setTimeout(function () {
+                     vm.counter = 0;
+                 },2000);
+            }
         },
         methods: {
             changeTitle: function(event) {
@@ -80,6 +143,9 @@
             result: function() {
                 console.log('Method');
                 return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+            },
+            changeLink: function () {
+                this.link = 'https://jelleceulemans.be/NLversie.html'
             }
         }
     });
