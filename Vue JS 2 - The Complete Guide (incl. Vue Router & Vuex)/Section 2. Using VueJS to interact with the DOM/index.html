@@ -10,9 +10,29 @@
 
 <div id="app">
     <input type="text" v-on:input="changeTitle">
+    <p>{{ changingWord }}</p>
     <h1 v-once>{{ title }}</h1>
     <p> {{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     <p v-html="finishedLink"></p>
+
+    <button v-on:click="increase(2, $event)">Click me</button>
+    <button v-on:click="counter++">Click me</button>
+    <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+    <p v-on:mousemove="updatecoordinates">Coordinates: {{ x }} / {{ y }}
+         - <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+    <input type="text" v-on:keyup.enter.space="alertMe">
+    <br /><br/>
+    <input type="text" v-model="name">
+    <p>{{ name }}</p>
+
+    <div>
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase Second</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
 </div>
 
 
@@ -20,17 +40,46 @@
     new Vue({
         el: '#app',
         data: {
+            changingWord: 'changing word',
             title: 'Hello World!',
             link: 'http://google.com',
-            finishedLink: '<a href="http://google.com">Google</a>'
+            finishedLink: '<a href="http://google.com">Google</a>',
+            counter: 0,
+            x: 0,
+            y: 0,
+            name: 'Max',
+            secondCounter: 0
+        },
+        computed: {
+          output: function () {
+              console.log('Computed');
+              return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+          }
         },
         methods: {
             changeTitle: function(event) {
-                this.title = event.target.value;
+                this.changingWord = event.target.value;
             },
             sayHello: function () {
                 this.title = 'Hello!';
                 return this.title;
+            },
+            increase: function (step, event) {
+               this.counter += step;
+            },
+            updatecoordinates: function (event) {
+                this.x = event.clientX;
+                this.y = event.clientY;
+            },
+            dummy: function (event) {
+                event.stopPropagation();
+            },
+            alertMe: function () {
+                alert('Alert!');
+            },
+            result: function() {
+                console.log('Method');
+                return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
             }
         }
     });
