@@ -15,12 +15,18 @@ import 'rxjs/add/operator/map';
 export class NewTrainingComponent implements OnInit, OnDestroy {
   exercises: Exercise[];
   exerciseSubscription: Subscription;
+  isLoading = false;
 
  
   constructor(private trainingService: TrainingService) { }
 
   ngOnInit() {
-    this.exerciseSubscription = this.trainingService.exercisesChanged.subscribe(exercises => this.exercises = exercises);
+    this.exerciseSubscription = this.trainingService.exercisesChanged
+    .subscribe(exercises => {
+      this.exercises = exercises;
+      this.isLoading = true;
+    });
+    
     this.trainingService.fetchAvailableExercises();
   }
 
