@@ -18,7 +18,7 @@ import {
      MatTableModule,
      MatSortModule,
      MatPaginatorModule,
-     MatSnackBarModule} from '@angular/material';
+     MatSnackBarModule } from '@angular/material';
 @NgModule({
     imports: [
         MatButtonModule, 

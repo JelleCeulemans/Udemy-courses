@@ -1,10 +1,13 @@
-import { Component, OnInit, Injectable, OnDestroy } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { TrainingService } from '../training.service';
 import { Exercise } from '../exercise.model';
 import { NgForm } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { UIService } from 'src/app/shared/ui.service';
+import * as fromRoot from '../../app.reducer';
+import * as fromTraining from '../training.reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-new-training',
@@ -13,26 +16,18 @@ import { UIService } from 'src/app/shared/ui.service';
 })
 
 @Injectable()
-export class NewTrainingComponent implements OnInit, OnDestroy {
-  exercises: Exercise[];
-  private exerciseSubscription: Subscription;
-  private loadingSubscription: Subscription;
-  
-  isLoading = false;
+export class NewTrainingComponent implements OnInit {
+  exercises$: Observable<Exercise[]>;
+
+  isLoading$: Observable<boolean>;
 
  
-  constructor(private trainingService: TrainingService, private uiService: UIService) { }
+  constructor(private trainingService: TrainingService, private uiService: UIService, private store: Store<fromTraining.State>) { }
 
   ngOnInit() {
-    this.loadingSubscription = this.uiService.loadingStateChaged.subscribe(isLoading => {
-      this.isLoading = this.isLoading;
-    });
-    this.exerciseSubscription = this.trainingService.exercisesChanged
-    .subscribe(exercises => {
-      this.exercises = exercises;
-    });
+    this.isLoading$ = this.store.select(fromRoot.getIsLoading);
+    this.exercises$ = this.store.select(fromTraining.getAvailableExcercises)
     this.fetchExercises();
-    
   }
 
   fetchExercises() {
@@ -43,14 +38,4 @@ export class NewTrainingComponent implements OnInit, OnDestroy {
     console.log(form.value.exercise);
     this.trainingService.startExercise(form.value.exercise);
   }
-
-  ngOnDestroy() {
-    if(this.exerciseSubscription) {
-      this.exerciseSubscription.unsubscribe();
-    }
-    if(this.loadingSubscription){
-      this.loadingSubscription.unsubscribe();
-    }
-  }
-
 }
