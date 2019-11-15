@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(ingredient, i) in ingerdients">{{ ingredient }} ({{ i }})</li>
+            <li v-for="(ingredient, i) in ingerdients" :key="ingredient">{{ ingredient }} ({{ i }})</li>
         </ul>
         <hr>
             <ul>
