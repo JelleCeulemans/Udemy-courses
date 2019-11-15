@@ -5,7 +5,6 @@ import { UIService } from 'src/app/shared/ui.service';
 import { Observable } from 'rxjs';
 import * as fromRoot from '../../app.reducer'
 import { Store } from '@ngrx/store';
-import {map} from 'rxjs/operators'
 
 @Component({
   selector: 'app-login',
