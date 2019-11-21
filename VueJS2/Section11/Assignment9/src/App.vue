@@ -42,7 +42,7 @@
                     <!-- Display the Data Summary ONCE the Form HAS been submitted -->
 
                     <!-- Exercise 3 -->
-                    <!-- Edit the Example from above and create a custom "Full Name" Control -->
+                    <!-- Edit the Example1 from above and create a custom "Full Name" Control -->
                     <!-- which still holds the First Name and Last Name Input Field -->
                 </div>
             </div>
