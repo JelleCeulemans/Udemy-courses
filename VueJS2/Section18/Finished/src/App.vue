@@ -2,7 +2,7 @@
     <div class="container">
         <app-header></app-header>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12">
                 <transition name="slide" mode="out-in">
                     <router-view></router-view>
                 </transition>
@@ -18,7 +18,7 @@
             appHeader: Header
         },
         created() {
-            this.$store.dispatch('INIT_STOCKS');
+            this.$store.dispatch('initStocks');
         }
     }
 </script>
@@ -29,11 +29,11 @@
     }
 
     .slide-enter-active {
-        animation: slide-in 300ms ease-out forwards;
+        animation: slide-in 200ms ease-out forwards;
     }
 
     .slide-leave-active {
-        animation: slide-out 300ms ease-out forwards;
+        animation: slide-out 200ms ease-out forwards;
     }
 
     @keyframes slide-in {
@@ -49,7 +49,7 @@
 
     @keyframes slide-out {
         from {
-            transform: translateY(0px);
+            transform: translateY(0);
             opacity: 1;
         }
         to {
@@ -58,3 +58,4 @@
         }
     }
 </style>
+
