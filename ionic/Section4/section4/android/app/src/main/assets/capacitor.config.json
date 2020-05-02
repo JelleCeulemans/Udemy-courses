@@ -1,0 +1,11 @@
+{
+  "appId": "com.udemy-course.ionic-angular",
+  "appName": "Recipes",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "server": {
+    "url": "http://localhost:8100"
+  }
+}

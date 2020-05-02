@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>My Courses</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-item class="ion-margin">
+                <ion-label position="floating">Course Name</ion-label>
+                <ion-input type="text" id="input-name"></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin">
+                <ion-label position="floating">Course Rating (1-5)</ion-label>
+                <ion-input type="number" id="input-rating"></ion-input>
+            </ion-item>
+            <ion-button id="btn-add" class="ion-margin">ADD</ion-button>
+            <ion-list class="ion-margin" id="list-rating"></ion-list>
+        </ion-content>
+    </ion-app>
+    <script src="assignment1.js"></script>
+</body>
+
+</html>
