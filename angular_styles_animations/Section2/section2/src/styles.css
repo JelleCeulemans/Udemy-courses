@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  font-size: 25px;
+  color: darkgreen;
+}
+
+app-quote {
+  width: 50%;
+}
