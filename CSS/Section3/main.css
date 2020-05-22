@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box; /* below you can use inherit */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+#product-overview {
+    background: url('../assets/freedom.jpg');
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    /* box-sizing: inherit; includes padding and border for width and height (without margin) */
+}
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+} 
+
+h1 {
+    font-family: sans-serif;
+}
+
+.main-header {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #2ddf5c;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header_brand {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0e4f1f;
+    font-size: 22px;
+}
+
+.main-nav_item {
+    display: inline-block;
+    margin: 0 16px;
+    
+}
+
+.main-nav_items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav_item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+/* .main-nav_item a::after {
+    content: " (Link)";
+    color: red;
+} */
+
+.main-nav_item a:hover, .main-nav_item a:active {
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+/* p::first-letter {
+    color: red;
+    font-size: 20px;
+} */
+
+.main-nav__item--cta a {
+    color: white;
+    background-color: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color: #ff1b68;
+    background-color: white;
+    border: none;
+}

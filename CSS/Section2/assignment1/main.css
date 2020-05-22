@@ -1,0 +1,33 @@
+* {
+    font-family: sans-serif;
+}
+
+li {
+    font-family: inherit;
+}
+
+
+
+#assignment-instructions {
+    color: #ff10ff;
+    font-family: sans-serif;
+}
+
+code  {
+    font-family: monospace;
+    color: red;
+}
+
+.secondli {
+    color: green;
+}
+
+li:not(:first-child) {
+    color: #fff;
+    background-color: #000;
+}
+
+ol li {
+    color: #fff;
+    background-color: #000;
+}

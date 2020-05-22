@@ -1,0 +1,17 @@
+div {
+    padding: 20px 30px;
+    border: 5px solid #000;
+    margin: 20px 50px;
+    background-color: pink;
+    display: inline-block;
+}
+
+div:first-of-type {
+    height: 300px;
+    width: 50vw;
+    visibility: hidden;
+}
+
+div:last-of-type:hover {
+    box-shadow: 5px 5px 5px #aaa;
+}
