@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-world-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
+          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+        }
+      ]
+    },
+    "culture-info-details-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/cultureInfoDetails/CultureInfoDetailsWebPart.js",
+          "manifest": "./src/webparts/cultureInfoDetails/CultureInfoDetailsWebPart.manifest.json"
+        }
+      ]
+    },
+    "get-list-of-lists-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/getListOfListsDemo/GetListOfListsDemoWebPart.js",
+          "manifest": "./src/webparts/getListOfListsDemo/GetListOfListsDemoWebPart.manifest.json"
+        }
+      ]
+    },
+    "property-pane-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/propertyPaneWebPart/PropertyPaneWebPartWebPart.js",
+          "manifest": "./src/webparts/propertyPaneWebPart/PropertyPaneWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
+    "CultureInfoDetailsWebPartStrings": "lib/webparts/cultureInfoDetails/loc/{locale}.js",
+    "GetListOfListsDemoWebPartStrings": "lib/webparts/getListOfListsDemo/loc/{locale}.js",
+    "PropertyPaneWebPartWebPartStrings": "lib/webparts/propertyPaneWebPart/loc/{locale}.js"
+  }
+}

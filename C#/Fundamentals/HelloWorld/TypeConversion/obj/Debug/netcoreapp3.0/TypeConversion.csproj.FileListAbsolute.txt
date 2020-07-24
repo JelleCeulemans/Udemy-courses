@@ -1,0 +1,11 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\bin\Debug\netcoreapp3.0\TypeConversion.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\obj\Debug\netcoreapp3.0\TypeConversion.csprojAssemblyReference.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\obj\Debug\netcoreapp3.0\TypeConversion.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\obj\Debug\netcoreapp3.0\TypeConversion.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\obj\Debug\netcoreapp3.0\TypeConversion.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\TypeConversion\obj\Debug\netcoreapp3.0\TypeConversion.pdb

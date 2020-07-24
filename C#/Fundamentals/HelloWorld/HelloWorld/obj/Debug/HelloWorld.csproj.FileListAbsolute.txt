@@ -1,0 +1,6 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csprojAssemblyReference.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

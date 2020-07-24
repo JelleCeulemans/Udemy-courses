@@ -1,0 +1,11 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\bin\Debug\netcoreapp3.0\Iterations.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\obj\Debug\netcoreapp3.0\Iterations.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\obj\Debug\netcoreapp3.0\Iterations.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\obj\Debug\netcoreapp3.0\Iterations.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\obj\Debug\netcoreapp3.0\Iterations.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Iterations\obj\Debug\netcoreapp3.0\Iterations.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\bin\Debug\netcoreapp3.0\CSharpFundamentals.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\obj\Debug\netcoreapp3.0\CSharpFundamentals.csprojAssemblyReference.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\obj\Debug\netcoreapp3.0\CSharpFundamentals.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\obj\Debug\netcoreapp3.0\CSharpFundamentals.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\obj\Debug\netcoreapp3.0\CSharpFundamentals.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\CSharpFundamentals\obj\Debug\netcoreapp3.0\CSharpFundamentals.pdb

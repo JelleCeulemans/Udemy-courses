@@ -49,8 +49,13 @@ export class PlacesService {
   }
 
   getPlace(id: string) {
-    return this.places.pipe(take(1), map(places => places.find(p => p.id === id)));
-    // return { ...this.placesArray.find(p => p.id === id) };
+    // return this.places.pipe(take(1), map(places => places.find(p => p.id === id)));
+    // // return { ...this.placesArray.find(p => p.id === id) };
+    return this.http.get<PlaceData>(this.baseURL + '/' + id + '.json').pipe(
+      map(placeData => {
+        const { title, description, imageUrl, price, availableFrom, availableTo, userId } = placeData;
+        return new Place(id, title, description, imageUrl, price, new Date(availableFrom), new Date(availableTo), userId);
+      }));
   }
 
 
@@ -95,6 +100,13 @@ export class PlacesService {
     let updatedPlaces: Place[];
     return this.places.pipe(
       take(1),
+      switchMap(places => {
+        if (!places || places.length <= 0) {
+          return this.fetchPlaces();
+        } else {
+          return of(places);
+        }
+      }),
       switchMap(places => {
         if (!places || places.length <= 0) {
           return this.fetchPlaces();
