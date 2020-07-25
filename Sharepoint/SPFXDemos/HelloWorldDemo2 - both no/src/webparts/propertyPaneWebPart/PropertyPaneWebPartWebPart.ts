@@ -2,10 +2,12 @@ import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
-  PropertyPaneToggle
+  PropertyPaneToggle,
+  PropertyPaneSlider,
+  PropertyPaneChoiceGroup
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { escape } from '@microsoft/sp-lodash-subset';
+import { escape, trimEnd } from '@microsoft/sp-lodash-subset';
 
 import styles from './PropertyPaneWebPartWebPart.module.scss';
 import * as strings from 'PropertyPaneWebPartWebPartStrings';
@@ -20,7 +22,13 @@ export interface IPropertyPaneWebPartWebPartProps {
   billAmount: number;
   discount: number;
   netBillAmount: number;
+
+  currentTime: Date;
   isCertified: boolean;
+
+  rating: number;
+  processorType: string;
+  invoiceType: string;
 }
 
 export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IPropertyPaneWebPartWebPartProps> {
@@ -31,6 +39,10 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
       this.properties.productDescription = 'Mouse Description';
       this.properties.quantity = 500;
       this.properties.productCost = 300;
+      this.properties.isCertified = false;
+      this.properties.rating = 1;
+      this.properties.processorType = 'I7';
+      this.properties.invoiceType = '';
 
       resolve(undefined);
     });
@@ -47,6 +59,10 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
       <div class="${ styles.row}">
         <div class="${ styles.column}">
             <table>
+            <tr>
+            <td>Current Time</td>
+            <td>${this.properties.currentTime = new Date()}</td>
+            </tr>
               <tr>
               <td>Product Name</td>
               <td>${this.properties.productName}</td>
@@ -79,6 +95,18 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
               <td>ISI Certified</td>
               <td>${this.properties.isCertified}</td>
               </tr>
+              <tr>
+              <td>Rating Score</td>
+              <td>${this.properties.rating}</td>
+              </tr>
+              <tr>
+              <td>Processor Type</td>
+              <td>${this.properties.processorType}</td>
+              </tr>
+              <tr>
+              <td>Invoice File Type</td>
+              <td>${this.properties.invoiceType}</td>
+              </tr>
             </table>
           </div>
           </div>
@@ -90,27 +118,7 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
     return Version.parse('1.0');
   }
 
-  //   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-  //   return {
-  //     pages: [
-  //       {
-  //         header: {
-  //           description: strings.PropertyPaneDescription
-  //         },
-  //         groups: [
-  //           {
-  //             groupName: strings.BasicGroupName,
-  //             groupFields: [
-  //               PropertyPaneTextField('description', {
-  //                 label: strings.DescriptionFieldLabel
-  //               })
-  //             ]
-  //           }
-  //         ]
-  //       }
-  //     ]
-  //   };
-  // }
+
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
@@ -151,6 +159,45 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
               label: 'Is it Certified?',
               onText: 'ISI Certified',
               offText: 'Not an ISI Certified product'
+            }),
+            PropertyPaneSlider('rating', {
+              label: 'Rating',
+              min: 1,
+              max: 10,
+              step: 1,
+              showValue: true,
+              value: 1
+            }),
+            PropertyPaneChoiceGroup('processorType', {
+              label: 'Choices',
+              options: [
+                { key: 'I5', text: 'Intel I5' },
+                { key: 'I7', text: 'Intel I7', checked: true },
+                { key: 'I9', text: 'Intel I9' }
+              ]
+            }),
+            PropertyPaneChoiceGroup('invoiceType', {
+              label: 'Select Invoice File type:',
+              options: [
+                {
+                  key: 'MSWorld', text: 'MSWorld',
+                  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Word_hi-res_icon_%282019%29.svg',
+                  imageSize: { width: 32, height: 32 },
+                  selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Word_hi-res_icon_%282019%29.svg'
+                },
+                {
+                  key: 'MSExcel', text: 'MSExcel',
+                  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013_logo.svg',
+                  imageSize: { width: 32, height: 32 },
+                  selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013_logo.svg'
+                },
+                {
+                  key: 'MSPowerpoint', text: 'MSPowerpoint',
+                  imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Microsoft_PowerPoint_2013_logo.svg',
+                  imageSize: { width: 32, height: 32 },
+                  selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Microsoft_PowerPoint_2013_logo.svg'
+                }
+              ]
             })
           ]
         }]
