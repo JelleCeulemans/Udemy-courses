@@ -2,6 +2,11 @@
 
 namespace Exercise1
 {
+    public enum ImageOrientation
+    {
+        Landscape,
+        Portrait
+    }
     class Program
     {
         static void Main(string[] args)

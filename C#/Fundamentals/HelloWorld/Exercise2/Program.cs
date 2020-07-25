@@ -34,6 +34,11 @@ namespace Exercise2
             //    {
             //        total += int.Parse(input);
             //    }
+
+            /*if (input.ToLower() == "ok")
+                break;
+
+            sum += Convert.ToInt32(input);*/
             //}
 
             // Exercise 3
@@ -67,6 +72,26 @@ namespace Exercise2
             //    }
 
             //} while (input != number && attempts >= 1);
+
+          /*  public void Exercise4()
+            {
+                var number = new Random().Next(1, 10);
+
+                Console.WriteLine("Secret is " + number);
+                for (var i = 0; i < 4; i++)
+                {
+                    Console.Write("Guess the secret number: ");
+                    var guess = Convert.ToInt32(Console.ReadLine());
+
+                    if (guess == number)
+                    {
+                        Console.WriteLine("You won!");
+                        return;
+                    }
+                }
+
+                Console.WriteLine("You lost!");
+            }*/
 
             // Exercise 5
             Console.Write("Enter a series of number seperated by a comma: ");
