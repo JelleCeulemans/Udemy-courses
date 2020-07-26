@@ -4,7 +4,10 @@ import {
   PropertyPaneTextField,
   PropertyPaneToggle,
   PropertyPaneSlider,
-  PropertyPaneChoiceGroup
+  PropertyPaneChoiceGroup,
+  PropertyPaneDropdown,
+  PropertyPaneCheckbox,
+  PropertyPaneLink
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { escape, trimEnd } from '@microsoft/sp-lodash-subset';
@@ -29,6 +32,9 @@ export interface IPropertyPaneWebPartWebPartProps {
   rating: number;
   processorType: string;
   invoiceType: string;
+
+  newProcessorType: string;
+  discountCoupon: boolean;
 }
 
 export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IPropertyPaneWebPartWebPartProps> {
@@ -42,7 +48,9 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
       this.properties.isCertified = false;
       this.properties.rating = 1;
       this.properties.processorType = 'I7';
-      this.properties.invoiceType = '';
+      this.properties.invoiceType = 'MSWord';
+      this.properties.newProcessorType = 'I7';
+      this.properties.discountCoupon = false;
 
       resolve(undefined);
     });
@@ -106,6 +114,14 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
               <tr>
               <td>Invoice File Type</td>
               <td>${this.properties.invoiceType}</td>
+              </tr>
+              <tr>
+              <td>New Processor Type</td>
+              <td>${this.properties.newProcessorType}</td>
+              </tr>
+              <tr>
+              <td>Do you have a Discount Coupon ?</td>
+              <td>${this.properties.discountCoupon}</td>
               </tr>
             </table>
           </div>
@@ -180,10 +196,11 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
               label: 'Select Invoice File type:',
               options: [
                 {
-                  key: 'MSWorld', text: 'MSWorld',
+                  key: 'MSWord', text: 'MSWord',
                   imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Word_hi-res_icon_%282019%29.svg',
                   imageSize: { width: 32, height: 32 },
-                  selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Word_hi-res_icon_%282019%29.svg'
+                  selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Word_hi-res_icon_%282019%29.svg',
+                  checked: true
                 },
                 {
                   key: 'MSExcel', text: 'MSExcel',
@@ -198,6 +215,31 @@ export default class PropertyPaneWebPartWebPart extends BaseClientSideWebPart<IP
                   selectedImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Microsoft_PowerPoint_2013_logo.svg'
                 }
               ]
+            }),
+            PropertyPaneDropdown('newProcessorType', {
+              label: 'New Processor Type',
+              options: [
+                { key: 'I5', text: 'Intel I5' },
+                { key: 'I7', text: 'Intel I7'},
+                { key: 'I9', text: 'Intel I9' }
+              ],
+              selectedKey: 'I7'
+            }),
+            PropertyPaneCheckbox('discountCoupon', {
+              text: 'Do you have a discount Coupon',
+              checked: false,
+              disabled: false
+            }),
+            PropertyPaneLink('', {
+              href: 'https://www.bol.com',
+              text: 'Buy Intel Processor from the best Seller',
+              target: '_blank',
+              popupWindowProps: {
+                height: 500,
+                width: 500,
+                positionWindowPosition: 2,
+                title: 'Bol.com'
+              }
             })
           ]
         }]
