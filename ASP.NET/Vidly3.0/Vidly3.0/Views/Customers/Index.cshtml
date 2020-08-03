@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customers</h1>
+
+@if (@Model != null)
+{
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Customers</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in @Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(customer.Name, "Details", "Customers", new {id = customer.Id}, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>We don't have any customers yet.</p>
+}

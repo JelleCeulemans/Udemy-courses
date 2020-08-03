@@ -1,0 +1,10 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\bin\Debug\netcoreapp3.0\WorkingWithDates.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\obj\Debug\netcoreapp3.0\WorkingWithDates.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\obj\Debug\netcoreapp3.0\WorkingWithDates.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\obj\Debug\netcoreapp3.0\WorkingWithDates.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithDates\obj\Debug\netcoreapp3.0\WorkingWithDates.pdb

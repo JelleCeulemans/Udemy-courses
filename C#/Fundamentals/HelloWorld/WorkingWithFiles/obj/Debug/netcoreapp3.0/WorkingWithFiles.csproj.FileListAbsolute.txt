@@ -1,0 +1,11 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\bin\Debug\netcoreapp3.0\WorkingWithFiles.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\obj\Debug\netcoreapp3.0\WorkingWithFiles.csprojAssemblyReference.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\obj\Debug\netcoreapp3.0\WorkingWithFiles.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\obj\Debug\netcoreapp3.0\WorkingWithFiles.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\obj\Debug\netcoreapp3.0\WorkingWithFiles.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithFiles\obj\Debug\netcoreapp3.0\WorkingWithFiles.pdb
