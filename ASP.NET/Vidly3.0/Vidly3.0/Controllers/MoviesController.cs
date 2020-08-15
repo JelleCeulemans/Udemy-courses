@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Vidly3._0.Models;
 using Vidly3._0.Models.ViewModels;
 
@@ -10,6 +12,14 @@ namespace Vidly3._0.Controllers
 {
     public class MoviesController : Controller
     {
+        private readonly DBContext _context;
+        private readonly IMapper _mapper;
+
+        public MoviesController(DBContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
         public ActionResult Random()
         {
             var movie = new Movie() {Name = "Shrek!"};
@@ -33,21 +43,16 @@ namespace Vidly3._0.Controllers
             //return RedirectToAction("Index", "Home", new {page = 1, sortBy = "name"});
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Index()
         {
-            return Content("id=" + id);
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            return View(movies);
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Details(int id)
         {
-            //if (!pageIndex.HasValue)
-            //    pageIndex = 1;
-            //if (string.IsNullOrWhiteSpace(sortBy))
-            //    sortBy = "name";
-
-            //return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-            var movies = GetMovies();
-            return View(movies);
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+            return View(movie);
         }
 
         [Route("movies/released/{year}/{month}")]
@@ -56,14 +61,41 @@ namespace Vidly3._0.Controllers
             return Content(year + "/" + month);
         }
 
-        private static IEnumerable<Movie> GetMovies()
+        public IActionResult New()
         {
-            return new List<Movie>
+            var viewModel = new MovieFormViewModel
             {
-                new Movie {Name = "Shrek"},
-                new Movie() {Name = "Wall-e"}
+                Movie = new Movie(),
+                Genres = _context.Genres.ToList()
             };
+            return View("MovieForm", viewModel);
         }
 
+        public IActionResult Save(MovieFormViewModel viewModel)
+        {
+            var movie = viewModel.Movie;
+            if (movie.Id == 0)
+            {
+                _context.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                _mapper.Map(movie, movieInDb);
+            }
+            
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = _context.Movies.Single(m => m.Id == id),
+                Genres = _context.Genres.ToList()
+            };
+            return View("MovieForm", viewModel);
+        }
     }
 }
