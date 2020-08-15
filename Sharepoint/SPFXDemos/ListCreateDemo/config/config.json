@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "list-create-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/listCreateDemo/ListCreateDemoWebPart.js",
+          "manifest": "./src/webparts/listCreateDemo/ListCreateDemoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ListCreateDemoWebPartStrings": "lib/webparts/listCreateDemo/loc/{locale}.js"
+  }
+}

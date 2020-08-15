@@ -33,6 +33,30 @@
           "manifest": "./src/webparts/propertyPaneWebPart/PropertyPaneWebPartWebPart.manifest.json"
         }
       ]
+    },
+    "multiple-groups-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/multipleGroupsDemo/MultipleGroupsDemoWebPart.js",
+          "manifest": "./src/webparts/multipleGroupsDemo/MultipleGroupsDemoWebPart.manifest.json"
+        }
+      ]
+    },
+    "test-web-part-icon-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/testWebPartIcon/TestWebPartIconWebPart.js",
+          "manifest": "./src/webparts/testWebPartIcon/TestWebPartIconWebPart.manifest.json"
+        }
+      ]
+    },
+    "new-list-creation-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newListCreationWebPart/NewListCreationWebPartWebPart.js",
+          "manifest": "./src/webparts/newListCreationWebPart/NewListCreationWebPartWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -40,6 +64,9 @@
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
     "CultureInfoDetailsWebPartStrings": "lib/webparts/cultureInfoDetails/loc/{locale}.js",
     "GetListOfListsDemoWebPartStrings": "lib/webparts/getListOfListsDemo/loc/{locale}.js",
-    "PropertyPaneWebPartWebPartStrings": "lib/webparts/propertyPaneWebPart/loc/{locale}.js"
+    "PropertyPaneWebPartWebPartStrings": "lib/webparts/propertyPaneWebPart/loc/{locale}.js",
+    "MultipleGroupsDemoWebPartStrings": "lib/webparts/multipleGroupsDemo/loc/{locale}.js",
+    "TestWebPartIconWebPartStrings": "lib/webparts/testWebPartIcon/loc/{locale}.js",
+    "NewListCreationWebPartWebPartStrings": "lib/webparts/newListCreationWebPart/loc/{locale}.js"
   }
 }

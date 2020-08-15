@@ -58,7 +58,7 @@ export default class GetListOfListsDemoWebPart extends BaseClientSideWebPart <IG
       </ul>`;
     });
 
-    const listsPlaceholder: Element = this.domElement.querySelector('#');
+    const listsPlaceholder: Element = this.domElement.querySelector('#SPListPlaceHolder');
     listsPlaceholder.innerHTML = html;
   }
 
