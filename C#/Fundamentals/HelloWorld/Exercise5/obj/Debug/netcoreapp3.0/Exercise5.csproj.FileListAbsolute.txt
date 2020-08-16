@@ -1,0 +1,10 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\bin\Debug\netcoreapp3.0\Exercise5.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\obj\Debug\netcoreapp3.0\Exercise5.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\obj\Debug\netcoreapp3.0\Exercise5.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\obj\Debug\netcoreapp3.0\Exercise5.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\Exercise5\obj\Debug\netcoreapp3.0\Exercise5.pdb

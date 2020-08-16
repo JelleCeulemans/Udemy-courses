@@ -1,0 +1,11 @@
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.exe
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.deps.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.runtimeconfig.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.runtimeconfig.dev.json
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\bin\Debug\netcoreapp3.0\WorkingWithText.pdb
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\obj\Debug\netcoreapp3.0\WorkingWithText.csprojAssemblyReference.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\obj\Debug\netcoreapp3.0\WorkingWithText.AssemblyInfoInputs.cache
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\obj\Debug\netcoreapp3.0\WorkingWithText.AssemblyInfo.cs
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\obj\Debug\netcoreapp3.0\WorkingWithText.dll
+C:\Users\JelleCeulemans\Documents\Github\Udemy-courses\C#\Fundamentals\HelloWorld\WorkingWithText\obj\Debug\netcoreapp3.0\WorkingWithText.pdb
