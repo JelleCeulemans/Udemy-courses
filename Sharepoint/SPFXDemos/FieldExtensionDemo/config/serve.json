@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://jelleceulemans.sharepoint.com/sites/DemoSite/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "a8d20cd7-706a-4a0e-a934-e9ac8458c39b",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    },
+    "fieldCustomizerDemo": {
+      "pageUrl": "https://jelleceulemans.sharepoint.com/sites/DemoSite/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "a8d20cd7-706a-4a0e-a934-e9ac8458c39b",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    }
+  }
+}

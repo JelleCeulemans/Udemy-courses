@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "react-lifecycle-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reactLifecycleDemo/ReactLifecycleDemoWebPart.js",
+          "manifest": "./src/webparts/reactLifecycleDemo/ReactLifecycleDemoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ReactLifecycleDemoWebPartStrings": "lib/webparts/reactLifecycleDemo/loc/{locale}.js"
+  }
+}
