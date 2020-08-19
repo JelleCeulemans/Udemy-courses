@@ -1,5 +1,4 @@
-export interface IAnonymousApiDemoProps {
-  description: string;
+export interface IAnonymousDemo2State {
   id: string;
   name: string;
   username: string;

@@ -6,19 +6,15 @@ import { escape } from '@microsoft/sp-lodash-subset';
 export default class AnonymousApiDemo extends React.Component<IAnonymousApiDemoProps, {}> {
   public render(): React.ReactElement<IAnonymousApiDemoProps> {
     return (
-      <div className={ styles.anonymousApiDemo }>
-        <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SharePoint!</span>
-              <p className={ styles.subTitle }>Customize SharePoint experiences using Web Parts.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
-              <a href="https://aka.ms/spfx" className={ styles.button }>
-                <span className={ styles.label }>Learn more</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className={styles.anonymousApiDemo}>
+        <span className={styles.title}>User Details</span>
+        <div><strong>ID: </strong>{this.props.id}</div>
+        <div><strong>User Name: </strong>{this.props.username}</div>
+        <div><strong>Name: </strong>{this.props.name}</div>
+        <div><strong>Address: </strong>{this.props.address}</div>
+        <div><strong>Phone: </strong>{this.props.phone}</div>
+        <div><strong>Website: </strong>{this.props.website}</div>
+        <div><strong>Company: </strong>{this.props.company}</div>
       </div>
     );
   }
