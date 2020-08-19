@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://jelleceulemans.sharepoint.com/sites/DemoSite/SitePages/Section10.aspx",
+      "customActions": {
+        "5b4053e7-dc0c-40dd-a0dc-e830acecbba8": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "top": "Header of the page",
+            "bottom": "Footer of the page"
+          }
+        }
+      }
+    },
+    "acDemo": {
+      "pageUrl": "https://jelleceulemans.sharepoint.com/sites/DemoSite/SitePages/Section10.aspx",
+      "customActions": {
+        "5b4053e7-dc0c-40dd-a0dc-e830acecbba8": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

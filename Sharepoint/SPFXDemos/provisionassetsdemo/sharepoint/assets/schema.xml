@@ -1,0 +1,8 @@
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" FolderCreation="False">
+<MetaData>
+<ContentTypes>
+<ContentTypeRef ID="0x0100f7a1fef1be644f35a1e53bb2677de443" />
+</ContentTypes>
+<Fields></Fields>
+<Views>
+<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv"
