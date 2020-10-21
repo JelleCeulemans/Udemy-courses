@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "isolated-wp-demo-client-side-solution",
+    "id": "9a941ddf-7143-4b72-8c21-204ce9572e9d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": true,
+    "webApiPermissionRequests": [{
+      "resource": "Microsoft.Graph",
+      "scope": "User.ReadBasic.All"
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/isolated-wp-demo.sppkg"
+  }
+}

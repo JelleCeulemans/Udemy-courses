@@ -11,13 +11,36 @@ import * as strings from 'ExtLibDemoWebPartStrings';
 import ExtLibDemo from './components/ExtLibDemo';
 import { IExtLibDemoProps } from './components/IExtLibDemoProps';
 
+import * as $ from 'jquery';
+import 'jqueryui';
+
+import { SPComponentLoader } from '@microsoft/sp-loader';
+
 export interface IExtLibDemoWebPartProps {
   description: string;
 }
 
 export default class ExtLibDemoWebPart extends BaseClientSideWebPart<IExtLibDemoWebPartProps> {
 
+
+  public constructor() {
+    super();
+    SPComponentLoader.loadCss('https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+  }
+
   public render(): void {
+
+    const accordionOptions: JQueryUI.AccordionOptions = {
+      animate: true,
+      collapsible: false,
+      icons: {
+        header: 'ui-icon-circle-arrow-e',
+        activeHeader: 'ui-icon-circle-arrow-s'
+      }
+    };
+
+    ($('.accordion', this.domElement)).accordion(accordionOptions);
+
     const element: React.ReactElement<IExtLibDemoProps> = React.createElement(
       ExtLibDemo,
       {

@@ -1,24 +1,51 @@
 import * as React from 'react';
 import styles from './ExtLibDemo.module.scss';
-import { IExtLibDemoProps } from './IExtLibDemoProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import { IExtLibDemoProps } from './IExtLibDemoProps';
+import { IAccordionContent } from './Accordion/IAccordionContent';
+import Accordion from './Accordion/Accordion';
 
 export default class ExtLibDemo extends React.Component<IExtLibDemoProps, {}> {
   public render(): React.ReactElement<IExtLibDemoProps> {
+
+    const accordionContent: IAccordionContent[] = [
+      {
+        title: "Lesson 14 - ECMAScript Implementation",
+        listItems: [
+          "Overview ECMAScript",
+          "Using ECMAScript in Application pages",
+          "Using ECMAScript in Web Parts",
+          "Implementing onSuccess Function",
+          "Implementing onFail Function",
+        ]
+      },
+      {
+        title: "Lesson 15 - Silverlight Implementation",
+        listItems: [
+          "Overview of Silverlight Implementation",
+          "Using Load Function to load resources",
+          "Adding Fields to a custom list using Silverlight Implementation",
+          "Exception handling with Silverlight Implementation",
+          "Cross Domain Policy"
+        ]
+      },
+      {
+        title: "Lesson 16 - Developing Custom Dialogs",
+        listItems: [
+          "Create a Custom Dialog for Data Entry",
+          "JavaScript and the Client Obhect Model",
+          "Modal Dialogs",
+          "Creating a Custom Dialog",
+          "Controlling the Client Side Behavior and Visibility of the Dialog",
+          "Adding Server Side Functionality to the Dailog",
+          "Deployig and Testing the Dialog User Control"
+        ]
+      }
+    ];
+
     return (
-      <div className={ styles.extLibDemo }>
-        <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SharePoint!</span>
-              <p className={ styles.subTitle }>Customize SharePoint experiences using Web Parts.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
-              <a href="https://aka.ms/spfx" className={ styles.button }>
-                <span className={ styles.label }>Learn more</span>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className={styles.extLibDemo}>
+        <Accordion content={accordionContent} />
       </div>
     );
   }
